@@ -13,7 +13,7 @@ export default function Header({ activeTab, setActiveTab }) {
       <div className={styles.logo}>
         <div className={styles.logoMark}>🎵</div>
         <div>
-          <div className={styles.logoText}>SangeetAI Elite</div>
+          <div className={styles.logoText}>Roy's SangeetAI Elite</div>
           <div className={styles.logoSub}>Your Digital Guru</div>
         </div>
       </div>
