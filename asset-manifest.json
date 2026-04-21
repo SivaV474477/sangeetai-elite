@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/sangeetai-elite/static/css/main.4546864c.css",
-    "main.js": "/sangeetai-elite/static/js/main.e2c4c812.js",
+    "main.js": "/sangeetai-elite/static/js/main.1b49371e.js",
     "index.html": "/sangeetai-elite/index.html",
     "main.4546864c.css.map": "/sangeetai-elite/static/css/main.4546864c.css.map",
-    "main.e2c4c812.js.map": "/sangeetai-elite/static/js/main.e2c4c812.js.map"
+    "main.1b49371e.js.map": "/sangeetai-elite/static/js/main.1b49371e.js.map"
   },
   "entrypoints": [
     "static/css/main.4546864c.css",
-    "static/js/main.e2c4c812.js"
+    "static/js/main.1b49371e.js"
   ]
 }
