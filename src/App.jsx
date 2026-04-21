@@ -35,8 +35,9 @@ export default function App() {
           loop
           playsInline
           className={styles.bgVideo}
+          poster={process.env.PUBLIC_URL + "/media/studio-hero.jpg"}
         >
-          <source src="/media/studio-video.mp4" type="video/mp4" />
+          <source src={process.env.PUBLIC_URL + "/media/studio-video.mp4"} type="video/mp4" />
         </video>
         {/* Dark overlay so text stays readable */}
         <div className={styles.bgOverlay} />
