@@ -1,0 +1,55 @@
+/* ─── SangeetAI Elite — Global Styles ─── */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap');
+
+:root {
+  --obsidian:   #0A0A0A;
+  --eerie:      #111111;
+  --surface:    #171717;
+  --card:       #1E1E1E;
+  --gold:       #D4AF37;
+  --gold-dim:   #A8852A;
+  --gold-glow:  rgba(212,175,55,0.12);
+  --gold-border:rgba(212,175,55,0.22);
+  --smoke:      #F5F5F5;
+  --muted:      #777;
+  --subtle:     #444;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans:  'DM Sans', system-ui, sans-serif;
+  --radius-sm:  8px;
+  --radius-md:  12px;
+  --radius-lg:  18px;
+  --transition: 0.25s cubic-bezier(0.4,0,0.2,1);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--obsidian);
+  color: var(--smoke);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 { font-family: var(--font-serif); font-weight: 600; color: var(--smoke); }
+
+button { cursor: pointer; font-family: var(--font-sans); }
+
+input, textarea {
+  font-family: var(--font-sans);
+  background: var(--card);
+  color: var(--smoke);
+  border: 1px solid var(--gold-border);
+  border-radius: var(--radius-sm);
+  outline: none;
+  transition: border var(--transition);
+}
+input:focus, textarea:focus { border-color: var(--gold); }
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--gold-border); border-radius: 4px; }

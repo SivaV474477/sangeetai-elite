@@ -1,0 +1,140 @@
+.page { padding: 40px; background: transparent; }
+
+.heroText { margin-bottom: 36px; }
+.tag { font-size: 11px; color: var(--gold); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 10px; }
+.title { font-family: var(--font-serif); font-size: 40px; color: var(--smoke); margin-bottom: 10px; text-shadow: 0 2px 20px rgba(0,0,0,0.8); }
+.title em { color: var(--gold); }
+.sub { font-size: 14px; color: var(--smoke); max-width: 520px; line-height: 1.75; text-shadow: 0 1px 8px rgba(0,0,0,0.9); }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.card {
+  background: rgba(10, 10, 10, 0.55);   /* glass card over video */
+  border: 1px solid var(--gold-border);
+  border-radius: var(--radius-lg);
+  padding: 22px 20px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  position: relative;
+  overflow: hidden;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+.card:hover {
+  border-color: var(--gold);
+  box-shadow: 0 16px 48px rgba(212,175,55,0.1);
+}
+.card:hover::before { opacity: 1; }
+
+.cardTop { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; }
+.melakarta { font-size: 10px; color: var(--gold); letter-spacing: 2px; text-transform: uppercase; }
+.time { font-size: 10px; color: var(--muted); }
+
+.ragaName { font-family: var(--font-serif); font-size: 22px; color: var(--smoke); margin-bottom: 4px; }
+.mood { font-size: 11px; color: var(--muted); font-style: italic; margin-bottom: 14px; }
+
+.notes { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 14px; }
+.note {
+  background: rgba(212,175,55,0.08);
+  border: 1px solid rgba(212,175,55,0.2);
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-size: 11px;
+  color: var(--gold);
+}
+
+.desc { font-size: 12px; color: var(--muted); line-height: 1.65; margin-bottom: 18px; }
+
+.cardActions { display: flex; gap: 8px; }
+.detailBtn {
+  flex: 1;
+  background: none;
+  border: 1px solid var(--gold-border);
+  color: var(--muted);
+  font-size: 12px;
+  padding: 9px;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition);
+}
+.detailBtn:hover { border-color: var(--gold); color: var(--smoke); }
+
+.guruBtn {
+  flex: 1;
+  background: var(--gold-glow);
+  border: 1px solid rgba(212,175,55,0.3);
+  color: var(--gold);
+  font-size: 12px;
+  padding: 9px;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition);
+}
+.guruBtn:hover { background: var(--gold); color: var(--obsidian); }
+
+/* Detail Modal */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  backdrop-filter: blur(4px);
+}
+
+.modal {
+  background: var(--surface);
+  border: 1px solid var(--gold-border);
+  border-radius: var(--radius-lg);
+  padding: 36px 32px;
+  max-width: 500px;
+  width: 100%;
+  position: relative;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 16px; right: 16px;
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-size: 16px;
+  transition: color var(--transition);
+}
+.closeBtn:hover { color: var(--smoke); }
+
+.modalMelakarta { font-size: 10px; color: var(--gold); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 6px; }
+.modalTitle { font-family: var(--font-serif); font-size: 32px; color: var(--smoke); margin-bottom: 4px; }
+.modalMood { font-size: 13px; color: var(--muted); font-style: italic; margin-bottom: 24px; }
+
+.modalSection { margin-bottom: 16px; }
+.sectionLabel { display: block; font-size: 9px; color: var(--gold); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 4px; }
+.sectionValue { font-size: 14px; color: var(--smoke); line-height: 1.6; font-family: var(--font-serif); }
+
+.modalGuruBtn {
+  width: 100%;
+  margin-top: 24px;
+  background: linear-gradient(135deg, #D4AF37, #A8852A);
+  border: none;
+  color: var(--obsidian);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 14px;
+  border-radius: var(--radius-md);
+  transition: opacity var(--transition), transform var(--transition);
+  letter-spacing: 0.4px;
+}
+.modalGuruBtn:hover { opacity: 0.9; transform: translateY(-1px); }
