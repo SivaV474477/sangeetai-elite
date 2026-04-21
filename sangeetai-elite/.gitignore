@@ -1,8 +1,0 @@
-node_modules/
-build/
-.env
-backend/.venv/
-__pycache__/
-*.pyc
-.DS_Store
-.eslintcache
