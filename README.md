@@ -186,3 +186,4 @@ MIT — build, learn, share.
 ---
 
 *Dedicated to every student who ever sat before a Guru and asked: "Guruji, how do I sing this raga?"*
+# SangeetAI Elite
